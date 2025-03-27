@@ -5,9 +5,10 @@ from cell import Cell
 from maze import Maze
 
 def main():
-    window = Window(800, 600)
+    window = Window(1700, 1200)
 
-    maze = Maze(100, 100, 10, 10, 30, 30, window)
+    maze = Maze(100, 100, 20, 20, 30, 30, window)
+    maze.solve()
     window.wait_for_close()
 
 if __name__ == '__main__':

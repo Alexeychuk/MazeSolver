@@ -14,6 +14,9 @@ class Cell:
         self.visited = False
         self.center_point = Point((self._x1 + self._x2)/2, (self._y1 + self._y2)/2)
 
+    def __repr__(self):
+        return f"Cell(top_left_point={self._x1}, {self._y1}, bottom_right_point={self._x2}, {self._y2}), has_left_wall={self.has_left_wall}, has_right_wall={self.has_right_wall}, has_top_wall={self.has_top_wall}, has_bottom_wall={self.has_bottom_wall})"
+
     def draw(self,  color):
         if self._win is None:
             return
